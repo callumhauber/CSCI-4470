@@ -1,6 +1,7 @@
 # Lab 8 - Testing and Continuous Integration
 
 ## Checkpoint 1
+![checkpoint1](./screenshots/cmake_build_complete.png)
 
 ## Checkpoint 2
 Find the Nightly and Experimental sections and look at some of the submissions. How can you see what tests were run for a particular submission?
@@ -13,11 +14,19 @@ Find a system that is close to your specific configuration in the Nightly, Night
 - I found Ubuntu 20.04.2, which is close to my configuration because I have Ubuntu 21.10, link here: https://open.cdash.org/build/7800889. The dashboard is very clean, and there aren't any errors or warnings, so I don't think I need to be concerned about anything. 689 tests passed, 0 failed, 0 not run.
 
 #### Screenshot of Test Submission
+![checkpoint2](./screenshots/test_submission_all_passed.png)
 
 ## Checkpoint 3
 
 #### Screenshot of Submission With Errors
+![checkpoint3 failed tests](./screenshots/tests_failed.png)
 
 #### Screenshot of Fix and Successful Run
+![checkpoint3 diff](./screenshots/diff.png)
+![checkpoint3 fixed](./screenshots/test_submission_all_passed.png)
 
 ## Checkpoint 4
+
+[Link to Repo](https://github.com/callumhauber/CSCI-4470-Lab8-Checkpoint4)
+
+![checkpoint4 PR](./screenshots/github_actions_run.png)
