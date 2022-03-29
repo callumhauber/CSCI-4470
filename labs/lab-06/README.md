@@ -1,4 +1,4 @@
-# Lab 6 - Scientific Computing
+# Lab 06 - Scientific Computing
 
 ## Part 1 - 5 letter word game
 Code included in the lab 6 folder [here](./plot_words_5.py)

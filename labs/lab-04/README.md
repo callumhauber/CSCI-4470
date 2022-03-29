@@ -1,4 +1,4 @@
-# Lab 4 - Licensing
+# Lab 04 - Licensing
 
 ## Why is it important to choose a LICENSE?
 It's important to choose a license so the users of your software know what rights (and restrictions) they have. Licenses also give your software legal protection. Licensing your software also makes it more likely to be used and improved, because users and companies will have a clear understanding of what they can and can't do. If you don't include a license then the default copyright laws apply, meaning that others aren't allowed to reproduce, distribute, or create derivate works with your code.

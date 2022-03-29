@@ -1,4 +1,4 @@
-# Lab 8 - Testing and Continuous Integration
+# Lab 07 - Testing and Continuous Integration
 
 ## Checkpoint 1
 ![checkpoint1](./screenshots/cmake_build_complete.png)

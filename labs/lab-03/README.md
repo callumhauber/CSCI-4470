@@ -1,4 +1,4 @@
-# Lab 3 - Documentation and Community
+# Lab 03 - Documentation and Community
 
 ## Part 1
 

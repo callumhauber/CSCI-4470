@@ -1,4 +1,4 @@
-# Lab 5 - Build Systems
+# Lab 05 - Build Systems
 ## Part 1 - CMake Tutorial
 ### Step 1
 Modified files, `tutorial.cxx`, and `CMakeLists.txt` located in `Part1_CMake_Tutorial/Step1`
