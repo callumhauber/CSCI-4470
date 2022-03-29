@@ -1,6 +1,5 @@
 # Lab 08 - Virtualization
 
-## Docker Examples
 ## Example 00
 
 <img src="./screenshots/ex00.png" alt="example 00" width="800"/>
