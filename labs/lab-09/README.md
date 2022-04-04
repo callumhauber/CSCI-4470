@@ -47,7 +47,7 @@ https://github.com/callumhauber/CSCI-4470/wiki/Lab-9-Checkpoint-0
 
 ### Part 2
 #### Command
-```json
+```bash
 curl -X POST admin:password@localhost:5984/hello-world/_find -d '{
    "selector": {
       "title": {
@@ -63,7 +63,7 @@ curl -X POST admin:password@localhost:5984/hello-world/_find -d '{
 
 ### Part 4
 #### Command
-```json
+```bash
 curl -X POST admin:password@localhost:5984/hello-world/_index -d '{
    "index": {
       "fields": [
