@@ -20,7 +20,7 @@ test_images = test_images / 255.0
 
 model = tf.keras.Sequential([
     tf.keras.layers.Flatten(input_shape=(28, 28)),
-    tf.keras.layers.Dense(128, activation='relu'),
+    tf.keras.layers.Dense(512, activation='relu'),
     tf.keras.layers.Dense(10)
 ])
 
@@ -38,11 +38,10 @@ print('\nTest accuracy:', test_acc)
 probability_model = tf.keras.Sequential([model,
                                          tf.keras.layers.Softmax()])
 
-predictions = probability_model.predict(test_images)
+# predictions = probability_model.predict(test_images)
 
 
-def plot_image(i, predictions_array, true_label, img):
-    true_label, img = true_label[i], img[i]
+def plot_image(predictions_array, true_label, img):
     plt.grid(False)
     plt.xticks([])
     plt.yticks([])
@@ -61,8 +60,7 @@ def plot_image(i, predictions_array, true_label, img):
                color=color)
 
 
-def plot_value_array(i, predictions_array, true_label):
-    true_label = true_label[i]
+def plot_value_array(predictions_array, true_label):
     plt.grid(False)
     plt.xticks(range(10))
     plt.yticks([])
@@ -74,18 +72,36 @@ def plot_value_array(i, predictions_array, true_label):
     thisplot[true_label].set_color('blue')
 
 
-# Color correct predictions in blue and incorrect predictions in red.
-img = Image.open("./test.png")
+lab_images = []
+
+img = Image.open("./test_images/processed/shirt.png")
 img = np.array(img)
-
-img = img / 255
-
+img = img / 255.0
 img = (np.expand_dims(img, 0))
+lab_images.append((img, 0))
 
-predictions_single = probability_model.predict(img)
+img = Image.open("./test_images/processed/hoodie.png")
+img = np.array(img)
+img = img / 255.0
+img = (np.expand_dims(img, 0))
+lab_images.append((img, 2))
 
-print(predictions_single)
+img = Image.open("./test_images/processed/sneaker.png")
+img = np.array(img)
+img = img / 255.0
+img = (np.expand_dims(img, 0))
+lab_images.append((img, 7))
 
-plot_value_array(1, predictions_single[0], test_labels)
-_ = plt.xticks(range(10), class_names, rotation=45)
-plt.show()
+for img in lab_images:
+    predictions_single = probability_model.predict(img[0])
+
+    print(predictions_single[0])
+
+    plt.figure(figsize=(4, 2))
+    plt.subplot(1, 2, 1)
+    plot_image(predictions_single[0], img[1], img[0][0])
+    plt.subplot(1, 2, 2)
+    plot_value_array(predictions_single[0], img[1])
+
+    plt.tight_layout()
+    plt.show()
